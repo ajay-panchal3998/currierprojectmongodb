@@ -1,0 +1,42 @@
+const mongoose = require("mongoose");
+
+const retailBookingSchema = new mongoose.Schema({
+    company_name: String,
+    document_number: { type: String, unique: true },
+    delivery_pin_code: String,
+    discount_booking: String,
+    sender_name: String,
+    sender_pincode: String,
+    sender_address: String,
+    email_address: String,
+    mobile_number: String,
+    gst_number: String,
+    kyc_type: String,
+    kyc_number: String,
+    receiver_name: String,
+    receiver_address: String,
+    receiver_mobile: String,
+    receiver_email: String,
+    type: String,
+    content: String,
+    weight: Number,
+    travel_by: String,
+    service: String,
+    value: Number,
+    insured: String,
+    payment: String,
+    price: Number,
+    package_charge: Number,
+    length: Number,
+    width: Number,
+    height: Number,
+    vol_weight: Number,
+    insurance_percentage: Number,
+    insurance_value: Number,
+    document_type: String,
+    document_image: String,
+    total_amount: Number,
+    pdf: String
+}, { timestamps: true });
+
+module.exports = mongoose.model("RetailBooking", retailBookingSchema);
