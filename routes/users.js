@@ -13,7 +13,7 @@ const jwt = require("jsonwebtoken");
 const User = require("../modals/User");
 
 const { genUserId, genOTP } = require("../Helper/encriptpass.js");
-const { encryptPassword, decryptPassword } = require("../helper/encriptpass.js");
+const { encryptPassword, decryptPassword } = require("../Helper/encriptpass.js");
 
 const genJwtToken = require("../middleware/genjwttoken.js");
 const sendMail = require("../Helper/sendMail.js");
